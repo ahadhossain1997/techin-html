@@ -4498,6 +4498,7 @@ ul.sub-menu li a:hover::before {
   bottom: 0;
   transition: all 0.4s;
   left: 40px;
+  z-index: 9;
   width: calc(100% - 80px);
 }
 @media (max-width: 767px) {
@@ -4566,19 +4567,19 @@ ul.sub-menu li a:hover::before {
     grid-template-columns: 1fr;
   }
 }
-.techin-p-wrap:hover .techin-p-content2 {
-  opacity: 1;
-  bottom: 30px;
-}
-.techin-p-wrap:hover .techin-p-thumb2 img {
-  transform: scale(1.1);
-}
 .techin-p-thumb2 {
   position: relative;
   overflow: hidden;
   height: 100%;
   border-radius: 20px;
   transition: all 0.4s;
+}
+.techin-p-thumb2:hover .techin-p-content2 {
+  opacity: 1;
+  bottom: 30px;
+}
+.techin-p-thumb2:hover .techin-p-thumb2 img {
+  transform: scale(1.1);
 }
 .techin-p-thumb2::before {
   background: rgba(255, 255, 255, 0.3);
