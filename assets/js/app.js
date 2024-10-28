@@ -254,22 +254,22 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       });
     }
 
-    // techin DATEPICKER JS INIT
+    // // techin DATEPICKER JS INIT
 
-    jQuery(document).ready(function () {
-      jQuery('#datepicker').datepicker({
-        format: 'dd-mm-yyyy',
-        startDate: '+1d'
-      });
-    });
-    jQuery(document).ready(function () {
-      jQuery('#id_StartDate').datepicker({
-        dateFormat: 'yy/mm/dd',
-        startDate: '0d',
-        minDate: 0,
-        highlightWeek: true
-      });
-    });
+    // jQuery(document).ready(function () {
+    //   jQuery('#datepicker').datepicker({
+    //       format: 'dd-mm-yyyy',
+    //       startDate: '+1d'
+    //   });
+    // });
+    // jQuery(document).ready(function () {
+    //   jQuery('#id_StartDate').datepicker({
+    //       dateFormat: 'yy/mm/dd',
+    //        startDate: '0d',
+    //        minDate: 0,
+    //        highlightWeek: true,
+    //   });
+    // });
 
     /*--------------------------------------------------------------
     techin BRAND SLIDER INIT

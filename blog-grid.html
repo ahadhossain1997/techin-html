@@ -410,18 +410,17 @@
   </div>
   <!-- End breadcrumb -->
 
-  <section class="techin-section-padding">
+  <section class="techin-section-padding3">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6">
-          <div class="techin-blog-top-info-info1">
-            <a href="single-blog.html">Showing 1 - 8 of 40 Result</a>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6">
-          <div class="techin-blog-top-info-info2">
-            <a href="#">Short By Latest<img src="assets/images/blog/3.svg" alt=""></a>
-          </div>
+      <div class="techin-blog-header">
+        <a class="techin-showing-result" href="#">Showing 1 - 8 of 40 Result</a>
+        <div class="teching-slect-wrapper">
+          <select>
+            <option data-display="Short By Latest">Nothing</option>
+            <option value="1">Some option</option>
+            <option value="2">Another option</option>
+            <option value="4">Potato</option>
+          </select>
         </div>
       </div>
       <div class="row">
@@ -763,9 +762,9 @@
   </section>
   <!-- end blog -->
 
-  <div class="techin-cta-section">
+  <div class="techin-cta-section mt-160" style="background-image: url(assets/images/cta/cta-bg1.png)">
     <div class="container">
-      <div class="techin-cta-wrap" style="background-image: url(assets/images/cta/cta-bg1.png)">
+      <div class="techin-cta-wrap">
         <div class="row">
           <div class="col-xl-8 col-lg-8">
             <div class="techin-cta-content">
@@ -781,7 +780,9 @@
           </div>
           <div class="col-xl-4 col-lg-4 d-flex align-items-center justify-content-end">
             <div class="techin-title-btn">
-              <a class="techin-default-btn pill techin-cta-btn" href="contact-us">Get A Quote</a>
+              <a class="techin-default-btn pill techin-cta-btn" href="contact-us" data-text="Get A Quote">
+                <span class="button-wraper">Get A Quote</span>
+              </a>
             </div>
           </div>
         </div>

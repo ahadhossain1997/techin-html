@@ -1178,13 +1178,12 @@
               </div>
               <div class="row">
                 <div class="col-lg-6">
-                  <div class="techin-main-field mb-20">
-                    <input type="text" name="StartDate" placeholder="DD-----YYY" class="form-control calendar" data-target="#datetimepicker1" id="id_StartDate">
-                    <img src="assets/images/v1/a3.svg" alt="">
+                  <div class="techin-main-field field5 mb-20">
+                    <input type="date" name="StartDate" placeholder="DD-----YYY" class="form-control calendar" data-target="#datetimepicker1" id="id_StartDate">
                   </div>
                 </div>
                 <div class="col-lg-6">
-                  <div class="techin-main-field mb-20">
+                  <div class="techin-main-field field5 mb-20">
                     <input type="time" placeholder="Select Time">
                   </div>
                 </div>
@@ -1193,8 +1192,8 @@
                 <textarea class="button-text" name="textarea" placeholder="Message"></textarea>
               </div>
               <div class="techin-appointment-submit-btn mt-30">
-                <button id="techin-submit-btn" type="button" data-text="Submite now">
-                  <span class="button-wraper">Submite now</span>
+                <button id="techin-submit-btn" type="button" data-text="Book Appointment">
+                  <span class="button-wraper">Book Appointment</span>
                 </button>
               </div>
             </form>
@@ -1579,7 +1578,9 @@
           </div>
           <div class="col-xl-4 col-lg-4 d-flex align-items-center justify-content-end">
             <div class="techin-title-btn">
-              <a class="techin-default-btn pill techin-cta-btn" href="contact-us">Get A Quote</a>
+              <a class="techin-default-btn pill techin-cta-btn" href="contact-us" data-text="Get A Quote">
+                <span class="button-wraper">Get A Quote</span>
+              </a>
             </div>
           </div>
         </div>

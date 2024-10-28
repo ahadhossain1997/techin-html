@@ -403,15 +403,13 @@
       </div>
       <div class="techin-hero-thumb thumb2" data-aos="fade-up" data-aos-duration="700">
         <img src="assets/images/hero/hero-thumb2.png" alt="">
-        <a class="techin-popup-video2 video-init" href="https://www.youtube.com/watch?v=zE_WFiHnSlY">
-          <img src="assets/images/hero/Circle-Button.svg" alt="">
-          <div class="waves waves2 wave-1"></div>
-          <div class="waves waves2 wave-2"></div>
-          <div class="waves waves2 wave-3"></div>
+        <a class="techin-popup-video2" href="contact-us.html">
+          <img class="teching-rotated" src="assets/images/hero/Circle-Button.svg" alt="">
+          <div class="play-btn">
+            <img src="assets/images/hero/btn.svg" alt="">
+          </div>
         </a>
-        <div class="play-btn">
-          <a class=" video-init" href="https://www.youtube.com/watch?v=zE_WFiHnSlY"><img src="assets/images/hero/btn.svg" alt=""></a>
-        </div>
+
       </div>
     </div>
   </div>
@@ -1053,13 +1051,12 @@
               <div class="row">
                 <div class="col-lg-6">
                   <div class="techin-main-field field2 mb-20">
-                    <input type="text" name="StartDate" placeholder="DD-----YYY" class="form-control calendar" data-target="#datetimepicker1" id="id_StartDate">
-                    <img src="assets/images/v1/a3.svg" alt="">
+                    <input type="date" name="StartDate" placeholder="DD-----YYY" class="form-control calendar" data-target="#datetimepicker1" id="id_StartDate">
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="techin-main-field field2 mb-20">
-                    <input type="text" placeholder="Select Time">
+                    <input type="time" placeholder="Select Time">
                   </div>
                 </div>
               </div>
@@ -1076,8 +1073,6 @@
         </div>
       </div>
     </div>
-
-
   </section>
   <!-- end section -->
 
@@ -1158,7 +1153,7 @@
               <h6>Our Price</h6>
               <span><img src="assets/images/v1/shape1.svg" alt=""></span>
             </div>
-            <h2 class="pricing-title">Choose Our Pricing Plan</h2>
+            <h2 class="techin-pricing-title">Choose Our Pricing Plan</h2>
             <div class="techin-title-btn2">
               <label for="toggle" class="toggle-switch switch2">
                 <input class="toggle-button" id="toggle" type="checkbox" name="toggle" data-checked="coreAnnuallyPrice,coreAnnuallyText" data-not-checked="coreMonthlyPrice,coreMonthlyText">
@@ -1878,7 +1873,9 @@
           </div>
           <div class="col-xl-4 col-lg-4 d-flex align-items-center justify-content-end">
             <div class="techin-title-btn">
-              <a class="techin-default-btn pill techin-cta-btn" href="contact-us">Get A Quote</a>
+              <a class="techin-default-btn pill techin-cta-btn" href="contact-us" data-text="Get A Quote">
+                <span class="button-wraper">Get A Quote</span>
+              </a>
             </div>
           </div>
         </div>
