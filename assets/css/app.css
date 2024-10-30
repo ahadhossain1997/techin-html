@@ -3715,6 +3715,8 @@ ul.sub-menu li a:hover::before {
   border-radius: 6px;
   padding: 18px 40px 18px 30px !important;
   height: 60px;
+  font-size: 14px;
+  line-height: 1.71em;
 }
 .techin-main-field-textarea.textarea2 .button-text {
   background-color: var(--white-bg) !important;
@@ -3731,7 +3733,11 @@ ul.sub-menu li a:hover::before {
 .techin-main-field.field3 {
   margin-bottom: 20px !important;
 }
-.techin-main-field.field5 input, .techin-main-field.field5 img {
+.techin-main-field.field5 input {
+  color: var(--body-color);
+  cursor: pointer;
+}
+.techin-main-field.field5 img {
   cursor: pointer;
 }
 
@@ -4703,7 +4709,7 @@ ul.sub-menu li a:hover::before {
   }
 }
 .techin-p-d-content {
-  border-radius: 20px;
+  border-radius: 20px 20px 12px;
   padding: 40px 40px 30px;
   background: linear-gradient(90deg, #1B1885 0%, #2F2BEB 44%, #1B1885 100%);
 }
@@ -4760,9 +4766,19 @@ ul.sub-menu li a:hover::before {
   }
 }
 .techin-p-d-thumb2 {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.techin-p-d-thumb2:hover img {
+  transform: scale(1.1);
 }
 .techin-p-d-thumb2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s;
   border-radius: 20px;
 }
 .techin-p-d-text3 {
@@ -4904,6 +4920,9 @@ ul.sub-menu li a:hover::before {
 .techin-faq-body.body2 p {
   font-size: 14px;
   line-height: 1.71em;
+}
+.techin-faq-body.body3 p {
+  color: var(--light-color5);
 }
 .techin-faq-thumb {
   margin-left: calc((-100vw + 100%) / 12);
@@ -6607,9 +6626,21 @@ ul.sub-menu li a:hover::before {
   border-radius: 20px;
   background: rgba(34, 38, 39, 0.8);
 }
-.blog-details .techin-blog .techin-blog-content .blog-d-thumb2 img {
+.blog-details .techin-blog .techin-blog-content .blog-d-thumb2 {
+  position: relative;
+  overflow: hidden;
   border-radius: 20px;
   margin-bottom: 30px;
+}
+.blog-details .techin-blog .techin-blog-content .blog-d-thumb2:hover img {
+  transform: scale(1.1);
+}
+.blog-details .techin-blog .techin-blog-content .blog-d-thumb2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s;
+  border-radius: 20px;
 }
 .blog-details .techin-blog-img {
   position: relative;
@@ -6733,6 +6764,10 @@ ul.sub-menu li a:hover::before {
   .blog-details .blog-d-admin-content {
     padding-top: 30px;
   }
+}
+.blog-details .blog-d-admin-content .text {
+  font-size: 14px;
+  line-height: 1.71em;
 }
 .blog-details .blog-d-admin-content h5, .blog-details .blog-d-admin-content p {
   color: var(--white-color);
@@ -7675,6 +7710,8 @@ textarea::placeholder { /* Most modern browsers support this now. */
   padding-bottom: 10px;
 }
 .techin-service-content2 p {
+  font-size: 14px;
+  line-height: 1.71em;
   margin-bottom: 24px;
 }
 .techin-service-wrap3 {
@@ -7754,7 +7791,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
   color: var(--white-color);
 }
 .techin-service-d-wrap {
-  padding: 40px;
+  padding: 40px 40px 34px;
   border-radius: 20px;
   background-color: var(--light-color);
 }
@@ -7879,6 +7916,10 @@ textarea::placeholder { /* Most modern browsers support this now. */
 .techin-service-d-thumb2 {
   position: relative;
   overflow: hidden;
+  border-radius: 20px;
+}
+.techin-service-d-thumb2:hover img {
+  transform: scale(1.1);
 }
 @media (max-width: 991px) {
   .techin-service-d-thumb2 {
@@ -8474,6 +8515,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
 .techin-about-info-text a {
   color: var(--body-color);
   display: block;
+  font-weight: 700;
 }
 .techin-about-info-text a span {
   font-family: "Ubuntu", sans-serif;
