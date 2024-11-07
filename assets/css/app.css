@@ -5597,6 +5597,10 @@ ul.sub-menu li a:hover::before {
   position: absolute;
   bottom: 40px;
   right: 40px;
+  overflow: hidden;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
 }
 @media (max-width: 1399px) {
   .techin-team-d-tag {
@@ -6346,8 +6350,8 @@ ul.sub-menu li a:hover::before {
   font-family: "Ubuntu", sans-serif;
   color: var(--white-color);
   background: var(--heading-color);
-  padding: 0 14px 0 10px;
-  display: inline-block;
+  padding: 0 14px;
+  display: block;
 }
 .blog-date-wrap2 .blog-month {
   padding: 0 12px;
@@ -8610,6 +8614,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
   display: flex;
   gap: 10px;
   padding-bottom: 10px;
+  align-items: center;
 }
 .techin-title-tag h6 {
   color: var(--accent-color);
