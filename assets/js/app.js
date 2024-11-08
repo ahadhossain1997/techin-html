@@ -10,23 +10,21 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
   /*--------------------------------------------------------------
    [Table of contents]
   
-  techin PRELOADER JS INIT
-  techin HEADER SEARCH JS INIT
-  techin STICKY MENU JS INIT
-  techin MENU SIDEBAR JS INIT
-  techin SKILLBAR JS INIT
-  techin HERO SLIDER INIT
-  techin FOUR COLUMN SLIDER INIT
-  techin THREE COLUMN SLIDER INIT
-  techin FOUR COLUMN SLIDER TWO INIT
-  techin TWO COLUMN SLIDER INIT
-  techin ONE COLUMN SLIDER INIT
-  techin THREE COLUMN SLIDER TWO INIT
-  techin BRAND SLIDER INIT
-  techin COUNTER JS INIT
-  techin COUNTER JS TWO INIT
-  techin MAP JS
-   
+  TECHIN PRELOADER JS INIT
+  TECHIN HEADER SEARCH JS INIT
+  TECHIN STICKY MENU JS INIT
+  TECHIN MENU SIDEBAR JS INIT
+  TECHIN PROGRES CIRCLE JS INIT
+  TECHIN BRAND SLIDER INIT
+  TECHIN MAGNIFIC PUPOP JS INIT
+  TECHIN COUNTER JS INIT
+  TECHIN THREE COLUMN SLIDER JS INIT
+  TECHIN TSTIMONIAL SLIDER INIT
+  TECHIN SKILLBAR JS INIT
+  TECHIN TOOGLE BUTTON JS INIT
+  TECHIN CURRENT YEAR JS INIT
+  TECHIN AOS ANIMATION JS INIT
+  TECHIN MAP JS INIT
   -------------------------------------------------------------------*/
 
   /*--------------------------------------------------------------
@@ -38,19 +36,19 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
   };
   $(function () {
     /*--------------------------------------------------------------
-    techin PRELOADER JS INIT
+    TECHIN PRELOADER JS INIT
     --------------------------------------------------------------*/
     $(".techin-preloader-wrap").fadeOut(500);
 
     /*--------------------------------------------------------------
-    techin HEADER SEARCH JS INIT
+    TECHIN HEADER SEARCH JS INIT
     ------------------------------------------------------------*/
     $(".techin-header-search, .techin-header-search-close, .search-overlay").click(function () {
       $(".techin-header-search-section, .search-overlay").toggleClass("open");
     });
 
     /*--------------------------------------------------------------
-    techin STICKY MENU JS INIT
+    TECHIN STICKY MENU JS INIT
     --------------------------------------------------------------*/
     $(window).on('scroll', function () {
       if ($(window).scrollTop() > 50) {
@@ -61,7 +59,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     });
 
     /*--------------------------------------------------------------
-    techin MENU SIDEBAR JS INIT
+    TECHIN MENU SIDEBAR JS INIT
     --------------------------------------------------------------*/
     $(".techin-header-triger").on("click", function (e) {
       $(".techin-sidemenu-column, .offcanvas-overlay").addClass("active");
@@ -72,7 +70,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     });
 
     /*--------------------------------------------------------------
-    techin Progree circle JS INIT
+    TECHIN PROGRES CIRCLE JS INIT
     --------------------------------------------------------------*/
 
     var progressPath = document.querySelector('.progress-wrap path');
@@ -107,38 +105,31 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       return false;
     });
 
-    /*--------------------------------------------------------------
-    techin HERO SLIDER INIT
-    --------------------------------------------------------------*/
-    /*----------- Global Slider ----------*/
-    $(".global-carousel").each(function () {
-      var carouselSlide = $(this);
-      function d(data) {
-        return carouselSlide.data(data);
-      }
-    });
     /*----------- Custom Animaiton For Slider ----------*/
 
-    $('[data-ani-duration]').each(function () {
-      var durationTime = $(this).data('ani-duration');
-      $(this).css('animation-duration', durationTime);
-    });
-    $('[data-ani-delay]').each(function () {
-      var delayTime = $(this).data('ani-delay');
-      $(this).css('animation-delay', delayTime);
-    });
-    $('[data-ani]').each(function () {
-      var animaionName = $(this).data('ani');
-      $(this).addClass(animaionName);
-      $('.slick-slide [data-ani]').addClass('slider-animated');
-    });
-    $('.global-carousel').on('afterChange', function (event, slick, currentSlide, nextSlide) {
-      $(slick.$slides).find('[data-ani]').removeClass('slider-animated');
-      $(slick.$slides[currentSlide]).find('[data-ani]').addClass('slider-animated');
-    });
+    // $('[data-ani-duration]').each(function () {
+    //   var durationTime = $(this).data('ani-duration');
+    //     $(this).css('animation-duration', durationTime);
+    // });
+
+    // $('[data-ani-delay]').each(function () {
+    //     var delayTime = $(this).data('ani-delay');
+    //     $(this).css('animation-delay', delayTime);
+    // });
+
+    // $('[data-ani]').each(function () {
+    //     var animaionName = $(this).data('ani');
+    //     $(this).addClass(animaionName);
+    //     $('.slick-slide [data-ani]').addClass('slider-animated');
+    // });
+
+    // $('.global-carousel').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+    //   $(slick.$slides).find('[data-ani]').removeClass('slider-animated');
+    //   $(slick.$slides[currentSlide]).find('[data-ani]').addClass('slider-animated');
+    // });
 
     /*--------------------------------------------------------------
-    techin BRAND SLIDER INIT
+    TECHIN BRAND SLIDER INIT
     --------------------------------------------------------------*/
     var brand_slider = $('.techin-brand-slider');
     if (brand_slider.is_exist()) {
@@ -194,8 +185,9 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         }]
       });
     }
+
     /*--------------------------------------------------------------
-    techin popup JS INIT
+    TECHIN MAGNIFIC PUPOP JS INIT
     --------------------------------------------------------------*/
     var popup_youtube = $('.video-init');
     if (popup_youtube.is_exist()) {
@@ -204,26 +196,27 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         mainClass: 'mfp-fade'
       });
     }
-    var $titleTab = $('.title_tab');
-    $('.Accordion_item:eq(0)').find('.title_tab').addClass('active').next().stop().slideDown(300);
-    $titleTab.on('click', function (e) {
-      e.preventDefault();
-      if ($(this).hasClass('active')) {
-        $(this).removeClass('active');
-        $(this).next().stop().slideUp(500);
-        $(this).next().find('p').removeClass('show');
-      } else {
-        $(this).addClass('active');
-        $(this).next().stop().slideDown(500);
-        $(this).parent().siblings().children('.title_tab').removeClass('active');
-        $(this).parent().siblings().children('.inner_content').slideUp(500);
-        $(this).parent().siblings().children('.inner_content').find('p').removeClass('show');
-        $(this).next().find('p').addClass('show');
-      }
-    });
+
+    // var $titleTab = $('.title_tab');
+    // $('.Accordion_item:eq(0)').find('.title_tab').addClass('active').next().stop().slideDown(300);
+    // $titleTab.on('click', function(e) {
+    // e.preventDefault();
+    //   if ( $(this).hasClass('active') ) {
+    //     $(this).removeClass('active');
+    //     $(this).next().stop().slideUp(500);
+    //     $(this).next().find('p').removeClass('show');
+    //   } else {
+    //     $(this).addClass('active');
+    //     $(this).next().stop().slideDown(500);
+    //     $(this).parent().siblings().children('.title_tab').removeClass('active');
+    //     $(this).parent().siblings().children('.inner_content').slideUp(500);
+    //     $(this).parent().siblings().children('.inner_content').find('p').removeClass('show');
+    //     $(this).next().find('p').addClass('show');
+    //   }
+    // });
 
     /*--------------------------------------------------------------
-    techin COUNTER JS INIT
+    TECHIN COUNTER JS INIT
     --------------------------------------------------------------*/
     var techin_counter = $('#techin-counter');
     if (techin_counter.is_exist()) {
@@ -254,25 +247,8 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       });
     }
 
-    // // techin DATEPICKER JS INIT
-
-    // jQuery(document).ready(function () {
-    //   jQuery('#datepicker').datepicker({
-    //       format: 'dd-mm-yyyy',
-    //       startDate: '+1d'
-    //   });
-    // });
-    // jQuery(document).ready(function () {
-    //   jQuery('#id_StartDate').datepicker({
-    //       dateFormat: 'yy/mm/dd',
-    //        startDate: '0d',
-    //        minDate: 0,
-    //        highlightWeek: true,
-    //   });
-    // });
-
     /*--------------------------------------------------------------
-    techin BRAND SLIDER INIT
+    TECHIN THREE COLUMN SLIDER JS INIT
     --------------------------------------------------------------*/
     var p_slider = $('.techin-three-column');
     if (p_slider.is_exist()) {
@@ -331,7 +307,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     }
 
     /*--------------------------------------------------------------
-    techin testimonial SLIDER INIT
+    TECHIN TSTIMONIAL SLIDER INIT
     --------------------------------------------------------------*/
     var t_slider = $('.techin-t-slider-init');
     if (t_slider.is_exist()) {
@@ -359,6 +335,11 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         }
       }]));
     }
+
+    /*--------------------------------------------------------------
+    TECHIN SKILLBAR JS INIT
+    --------------------------------------------------------------*/
+
     (function ($) {
       $.fn.skillBars = function (options) {
         var settings = $.extend({
@@ -417,6 +398,11 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         });
       };
     })(jQuery);
+
+    /*--------------------------------------------------------------
+    TECHIN TOOGLE BUTTON JS INIT
+    --------------------------------------------------------------*/
+
     $(document).ready(function () {
       $(".toggle-button").change(function () {
         toggle(this.checked);
@@ -427,56 +413,24 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       function toggle(checked) {
         $(".toggle-button").prop('checked', checked);
         if (checked) {
-          $('#coreMonthlyText,#coreMonthlyPrice,#proMonthlyText,#proMonthlyPrice').show();
-          $('#coreAnnuallyText,#coreAnnuallyPrice,#proAnnuallyText,#proAnnuallyPrice').hide();
+          $('.coreMonthlyPrice, .proMonthlyPrice').show();
+          $('.coreAnnuallyText, .coreAnnuallyPrice, .proAnnuallyPrice').hide();
         } else {
-          $('#coreMonthlyText,#coreMonthlyPrice,#proMonthlyText,#proMonthlyPrice').hide();
-          $('#coreAnnuallyText,#coreAnnuallyPrice,#proAnnuallyText,#proAnnuallyPrice').show();
+          $('.coreMonthlyPrice,.proMonthlyPrice').hide();
+          $('.coreAnnuallyText,.coreAnnuallyPrice, .proAnnuallyPrice').show();
         }
       }
     });
 
     /*--------------------------------------------------------------
-    techin COUNTER JS TWO INIT
-    --------------------------------------------------------------*/
-    var techin_counter2 = $('#techin-counter2');
-    if (techin_counter2.is_exist()) {
-      var a = 0;
-      $(window).scroll(function () {
-        var oTop = $(techin_counter2).offset().top - window.innerHeight;
-        if (a == 0 && $(window).scrollTop() > oTop) {
-          $('.techin-counter2').each(function () {
-            var $this = $(this),
-              countTo = $this.attr('data-percentage');
-            $({
-              countNum: $this.text()
-            }).animate({
-              countNum: countTo
-            }, {
-              duration: 4000,
-              easing: 'swing',
-              step: function step() {
-                $this.text(Math.floor(this.countNum));
-              },
-              complete: function complete() {
-                $this.text(this.countNum);
-              }
-            });
-          });
-          a = 1;
-        }
-      });
-    }
-
-    /*--------------------------------------------------------------
-    techin current year JS INIT
+    TECHIN CURRENT YEAR JS INIT
     --------------------------------------------------------------*/
 
     var currentYear = new Date().getFullYear();
     $('#current-year').text(currentYear);
 
     /*--------------------------------------------------------------
-    techin AOS ANIMATION JS INIT
+    TECHIN AOS ANIMATION JS INIT
     --------------------------------------------------------------*/
 
     AOS.init({
